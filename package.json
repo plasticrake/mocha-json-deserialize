@@ -1,25 +1,25 @@
 {
-  "name": "mocha-json-deserializer",
+  "name": "mocha-json-deserialize",
   "version": "0.0.0",
   "description": "A Mocha.js JSON deserializer",
   "keywords": [
     "mocha",
     "json"
   ],
-  "homepage": "https://github.com/plasticrake/mocha-json-deserializer#readme",
+  "homepage": "https://github.com/plasticrake/mocha-json-deserialize#readme",
   "bugs": {
-    "url": "https://github.com/plasticrake/mocha-json-deserializer/issues"
+    "url": "https://github.com/plasticrake/mocha-json-deserialize/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/plasticrake/mocha-json-deserializer.git"
+    "url": "git+https://github.com/plasticrake/mocha-json-deserialize.git"
   },
   "license": "MIT",
   "author": "Patrick Seal",
   "files": [
     "lib"
   ],
-  "main": "lib/mocha-json-deserializer.js",
+  "main": "lib/mocha-json-deserialize.js",
   "scripts": {
     "lint": "eslint .",
     "release": "standard-version --sign",
