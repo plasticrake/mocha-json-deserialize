@@ -1,0 +1,341 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 15,
+    "passes": 8,
+    "pending": 4,
+    "failures": 3,
+    "start": "2019-12-23T03:53:57.607Z",
+    "end": "2019-12-23T03:53:57.614Z",
+    "duration": 7
+  },
+  "suite": {
+    "title": "",
+    "pending": false,
+    "root": true,
+    "timeout": 2000,
+    "slow": 75,
+    "retries": -1,
+    "enableTimeouts": true,
+    "tests": [
+      {
+        "title": "test in the root suite",
+        "body": "function() {}",
+        "timedOut": false,
+        "pending": false,
+        "type": "test",
+        "file": "/fixtures/mocha-test.fixture.js",
+        "duration": 0,
+        "state": "passed",
+        "speed": "fast",
+        "timeout": 2000,
+        "slow": 75,
+        "retries": -1,
+        "currentRetry": 0,
+        "enableTimeouts": true
+      }
+    ],
+    "suites": [
+      {
+        "title": "suite one",
+        "pending": false,
+        "root": false,
+        "file": "/fixtures/mocha-test.fixture.js",
+        "timeout": 2000,
+        "slow": 75,
+        "retries": -1,
+        "enableTimeouts": true,
+        "tests": [
+          {
+            "title": "test that passes",
+            "body": "function() {}",
+            "timedOut": false,
+            "pending": false,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true
+          },
+          {
+            "title": "test that fails (assert)",
+            "body": "function() {\n    assert.fail('FAIL');\n  }",
+            "timedOut": false,
+            "pending": false,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 0,
+            "state": "failed",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true,
+            "err": {
+              "stack": "AssertionError [ERR_ASSERTION]: FAIL\n    at Context.<anonymous> (/fixtures/mocha-test.fixture.js:10:12)\n    at processImmediate (internal/timers.js:439:21)",
+              "message": "FAIL",
+              "generatedMessage": false,
+              "name": "AssertionError",
+              "code": "ERR_ASSERTION",
+              "operator": "fail",
+              "constructorName": "AssertionError"
+            }
+          },
+          {
+            "title": "test that fails (Error)",
+            "body": "function() {\n    throw new Error('FAIL');\n  }",
+            "timedOut": false,
+            "pending": false,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 0,
+            "state": "failed",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true,
+            "err": {
+              "stack": "Error: FAIL\n    at Context.<anonymous> (/fixtures/mocha-test.fixture.js:14:11)\n    at processImmediate (internal/timers.js:439:21)",
+              "message": "FAIL",
+              "constructorName": "Error"
+            }
+          },
+          {
+            "title": "test that is skipped",
+            "body": "function() {\n    this.skip();\n  }",
+            "timedOut": false,
+            "pending": true,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 0,
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true
+          },
+          {
+            "title": "another test that is skipped",
+            "body": "",
+            "timedOut": false,
+            "pending": true,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true
+          },
+          {
+            "title": "test that is slow",
+            "body": "function(done) {\n    this.slow(0);\n    setTimeout(done, 1);\n  }",
+            "timedOut": false,
+            "pending": false,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 2,
+            "state": "passed",
+            "speed": "slow",
+            "timeout": 2000,
+            "slow": 0,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true
+          },
+          {
+            "title": "",
+            "body": "function testWithNoTitle() {}",
+            "timedOut": false,
+            "pending": false,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true
+          }
+        ],
+        "suites": [
+          {
+            "title": "empty suite with nested",
+            "pending": false,
+            "root": false,
+            "file": "/fixtures/mocha-test.fixture.js",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "enableTimeouts": true,
+            "suites": [
+              {
+                "title": "nested empty suite",
+                "pending": false,
+                "root": false,
+                "file": "/fixtures/mocha-test.fixture.js",
+                "timeout": 2000,
+                "slow": 75,
+                "retries": -1,
+                "enableTimeouts": true
+              }
+            ]
+          },
+          {
+            "title": "nested suite",
+            "pending": false,
+            "root": false,
+            "file": "/fixtures/mocha-test.fixture.js",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "enableTimeouts": true,
+            "tests": [
+              {
+                "title": "nested suite test that passes",
+                "body": "function() {}",
+                "timedOut": false,
+                "pending": false,
+                "type": "test",
+                "file": "/fixtures/mocha-test.fixture.js",
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "timeout": 2000,
+                "slow": 75,
+                "retries": -1,
+                "currentRetry": 0,
+                "enableTimeouts": true
+              },
+              {
+                "title": "nested suite test that fails",
+                "body": "function() {\n      throw new Error('FAIL');\n    }",
+                "timedOut": false,
+                "pending": false,
+                "type": "test",
+                "file": "/fixtures/mocha-test.fixture.js",
+                "duration": 0,
+                "state": "failed",
+                "timeout": 2000,
+                "slow": 75,
+                "retries": -1,
+                "currentRetry": 0,
+                "enableTimeouts": true,
+                "err": {
+                  "stack": "Error: FAIL\n    at Context.<anonymous> (/fixtures/mocha-test.fixture.js:38:13)\n    at processImmediate (internal/timers.js:439:21)",
+                  "message": "FAIL",
+                  "constructorName": "Error"
+                }
+              },
+              {
+                "title": "nested suite test that is skipped",
+                "body": "function() {\n      this.skip();\n    }",
+                "timedOut": false,
+                "pending": true,
+                "type": "test",
+                "file": "/fixtures/mocha-test.fixture.js",
+                "duration": 0,
+                "timeout": 2000,
+                "slow": 75,
+                "retries": -1,
+                "currentRetry": 0,
+                "enableTimeouts": true
+              },
+              {
+                "title": "nested suite another test that is skipped",
+                "body": "",
+                "timedOut": false,
+                "pending": true,
+                "type": "test",
+                "file": "/fixtures/mocha-test.fixture.js",
+                "timeout": 2000,
+                "slow": 75,
+                "retries": -1,
+                "currentRetry": 0,
+                "enableTimeouts": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "suite two",
+        "pending": false,
+        "root": false,
+        "file": "/fixtures/mocha-test.fixture.js",
+        "timeout": 2000,
+        "slow": 75,
+        "retries": -1,
+        "enableTimeouts": true,
+        "tests": [
+          {
+            "title": "test one",
+            "body": "function() {}",
+            "timedOut": false,
+            "pending": false,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true
+          },
+          {
+            "title": "test two",
+            "body": "function() {}",
+            "timedOut": false,
+            "pending": false,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true
+          },
+          {
+            "title": "test three",
+            "body": "function() {}",
+            "timedOut": false,
+            "pending": false,
+            "type": "test",
+            "file": "/fixtures/mocha-test.fixture.js",
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "timeout": 2000,
+            "slow": 75,
+            "retries": -1,
+            "currentRetry": 0,
+            "enableTimeouts": true
+          }
+        ]
+      },
+      {
+        "title": "empty suite",
+        "pending": false,
+        "root": false,
+        "file": "/fixtures/mocha-test.fixture.js",
+        "timeout": 2000,
+        "slow": 75,
+        "retries": -1,
+        "enableTimeouts": true
+      }
+    ]
+  }
+}
