@@ -9,10 +9,12 @@ module.exports = {
     {
       env: {
         node: true,
+        mocha: true,
       },
       files: ['examples/*.js'],
       rules: {
         'import/no-unresolved': 'off',
+        'func-names': 'off',
         'no-console': 'off',
       },
     },

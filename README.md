@@ -20,7 +20,71 @@ This can be used to revive the JSON output from [mocha-json-serialize-reporter](
 
 ## Example
 
-See [Example](https://github.com/plasticrake/mocha-json-deserialize/tree/master/examples)
+See [Examples](https://github.com/plasticrake/mocha-json-deserialize/tree/master/examples)
+
+```js
+// Run this with mocha:
+// mocha examples/mocha.js
+
+const mochaJsonDeserialize = require('mocha-json-deserialize');
+
+// stringify is optional, can take a JSON string or an Object
+const json = JSON.stringify({
+  suite: {
+    title: '',
+    tests: [
+      { title: 'passing test', state: 'passed' },
+      { title: 'failing test', state: 'failed', err: { message: 'FAIL' } },
+      { title: 'pending test', pending: true },
+      {
+        title: 'a slow test',
+        state: 'passed',
+        speed: 'slow',
+        duration: 5,
+        slow: 3,
+      },
+    ],
+  },
+});
+
+const rootSuite = mochaJsonDeserialize(json);
+rootSuite.title = 'A deserialized suite';
+
+describe('A describe block', function() {
+  this.addSuite(rootSuite);
+
+  describe('A real suite', function() {
+    it('should have a passing test', function() {});
+  });
+});
+```
+
+```shell
+mocha examples/mocha.js
+```
+
+**Output:**
+
+```text
+  A describe block
+    A deserialized suite
+      ✓ passing test
+      1) failing test
+      - pending test
+      ✓ a slow test (5ms)
+    A real suite
+      ✓ should have a passing test
+
+
+  3 passing (7ms)
+  1 pending
+  1 failing
+
+  1) A describe block
+       A deserialized suite
+         failing test:
+     FAIL
+```
 
 ## License
 
