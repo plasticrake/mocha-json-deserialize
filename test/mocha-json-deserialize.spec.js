@@ -84,7 +84,7 @@ describe('MochaJsonDeserialize', function() {
 
     it('should throw when failed test is missing an `err` property', function() {
       expect(() => {
-        createTest({ state: STATE_FAILED });
+        createTest({ title: '', state: STATE_FAILED });
       }).to.throw('A failed test must have an "err" property');
     });
 
