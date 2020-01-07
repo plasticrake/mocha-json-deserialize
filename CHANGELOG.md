@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/plasticrake/mocha-json-deserialize/compare/v1.0.0...v1.1.0) (2020-01-07)
+
+
+### Features
+
+* add support for hooks ([6964fe2](https://github.com/plasticrake/mocha-json-deserialize/commit/6964fe292c2132e1b0ef194e1480041495afbcbf))
+
 ## 1.0.0 (2020-01-04)
 
 
