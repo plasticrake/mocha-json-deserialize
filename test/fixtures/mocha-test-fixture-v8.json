@@ -120,6 +120,7 @@
             "type": "test",
             "file": "/fixtures/mocha-test.fixture.js",
             "duration": 0,
+            "state": "pending",
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
@@ -132,6 +133,7 @@
             "pending": true,
             "type": "test",
             "file": "/fixtures/mocha-test.fixture.js",
+            "state": "pending",
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
@@ -240,6 +242,7 @@
                 "type": "test",
                 "file": "/fixtures/mocha-test.fixture.js",
                 "duration": 0,
+                "state": "pending",
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
@@ -252,6 +255,7 @@
                 "pending": true,
                 "type": "test",
                 "file": "/fixtures/mocha-test.fixture.js",
+                "state": "pending",
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
@@ -336,7 +340,8 @@
             "retries": -1,
             "_beforeEach": [
               {
-                "title": "\"before each\" hook",
+                "title": "\"before each\" hook in \"suite with beforeEach hook\"",
+                "originalTitle": "\"before each\" hook",
                 "body": "function() {}",
                 "timedOut": false,
                 "pending": false,
@@ -392,6 +397,7 @@
                 "type": "test",
                 "file": "/fixtures/mocha-test.fixture.js",
                 "duration": 0,
+                "state": "pending",
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
@@ -409,7 +415,8 @@
             "retries": -1,
             "_beforeAll": [
               {
-                "title": "\"before all\" hook",
+                "title": "\"before all\" hook in \"suite with before hook\"",
+                "originalTitle": "\"before all\" hook",
                 "body": "function() {}",
                 "timedOut": false,
                 "pending": false,
@@ -465,6 +472,7 @@
                 "type": "test",
                 "file": "/fixtures/mocha-test.fixture.js",
                 "duration": 0,
+                "state": "pending",
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
@@ -482,7 +490,8 @@
             "retries": -1,
             "_afterEach": [
               {
-                "title": "\"after each\" hook",
+                "title": "\"after each\" hook in \"suite with afterEach hook\"",
+                "originalTitle": "\"after each\" hook",
                 "body": "function() {}",
                 "timedOut": false,
                 "pending": false,
@@ -538,6 +547,7 @@
                 "type": "test",
                 "file": "/fixtures/mocha-test.fixture.js",
                 "duration": 0,
+                "state": "pending",
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
@@ -555,7 +565,8 @@
             "retries": -1,
             "_afterAll": [
               {
-                "title": "\"after all\" hook",
+                "title": "\"after all\" hook in \"suite with after hook\"",
+                "originalTitle": "\"after all\" hook",
                 "body": "function() {}",
                 "timedOut": false,
                 "pending": false,
@@ -611,6 +622,7 @@
                 "type": "test",
                 "file": "/fixtures/mocha-test.fixture.js",
                 "duration": 0,
+                "state": "pending",
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
@@ -911,6 +923,7 @@
                 "type": "test",
                 "file": "/fixtures/mocha-test.fixture.js",
                 "duration": 0,
+                "state": "pending",
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
@@ -937,8 +950,8 @@
     "passes": 15,
     "pending": 9,
     "failures": 14,
-    "start": "2020-01-07T04:52:28.781Z",
-    "end": "2020-01-07T04:52:28.793Z",
-    "duration": 12
+    "start": "2020-10-29T17:04:38.193Z",
+    "end": "2020-10-29T17:04:38.202Z",
+    "duration": 9
   }
 }
