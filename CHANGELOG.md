@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/plasticrake/mocha-json-deserialize/compare/v1.1.0...v1.1.1) (2020-10-29)
+
+
+### Bug Fixes
+
+* remove enableTimeouts removed in mocha v8 ([b3b2a38](https://github.com/plasticrake/mocha-json-deserialize/commit/b3b2a38290a5c715e0f3ba285e392f0bcf18495b))
+
 ## [1.1.0](https://github.com/plasticrake/mocha-json-deserialize/compare/v1.0.0...v1.1.0) (2020-01-07)
 
 
