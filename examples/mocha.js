@@ -25,10 +25,10 @@ const json = JSON.stringify({
 const rootSuite = mochaJsonDeserialize(json);
 rootSuite.title = 'A deserialized suite';
 
-describe('A describe block', function() {
+describe('A describe block', function () {
   this.addSuite(rootSuite);
 
-  describe('A real suite', function() {
-    it('should have a passing test', function() {});
+  describe('A real suite', function () {
+    it('should have a passing test', function () {});
   });
 });

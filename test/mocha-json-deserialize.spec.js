@@ -18,7 +18,7 @@ async function runJsonSerializeReporter(rootSuite, reporterOptions) {
   mocha.suite = rootSuite;
 
   const stdout = [];
-  sinon.stub(process.stdout, 'write').callsFake(o => {
+  sinon.stub(process.stdout, 'write').callsFake((o) => {
     stdout.push(o);
   });
 
@@ -35,39 +35,39 @@ async function runJsonSerializeReporter(rootSuite, reporterOptions) {
   return stdout.join('\n');
 }
 
-describe('MochaJsonDeserialize', function() {
-  it('should accept an Object', function() {
+describe('MochaJsonDeserialize', function () {
+  it('should accept an Object', function () {
     expect(
       mochaJsonDeserialize({ suite: { title: 'My Root Suite' } })
     ).to.have.property('title', 'My Root Suite');
   });
 
-  it('should accept a JSON string', function() {
+  it('should accept a JSON string', function () {
     expect(
       mochaJsonDeserialize('{ "suite": { "title": "My Root Suite" } }')
     ).to.have.property('title', 'My Root Suite');
   });
 
-  it('should accept a root suite under "suite" property', function() {
+  it('should accept a root suite under "suite" property', function () {
     expect(
       mochaJsonDeserialize({ suite: { title: 'My Root Suite' } })
     ).to.have.property('title', 'My Root Suite');
   });
 
-  it('should accept a root suite directly', function() {
+  it('should accept a root suite directly', function () {
     expect(mochaJsonDeserialize({ title: 'My Root Suite' })).to.have.property(
       'title',
       'My Root Suite'
     );
   });
 
-  it('should throw when json is missing a suite', function() {
+  it('should throw when json is missing a suite', function () {
     expect(() => {
       mochaJsonDeserialize({});
     }).to.throw(TypeError, 'Unexpected JSON object, missing root suite');
   });
 
-  it('should not throw when json has a suite', function() {
+  it('should not throw when json has a suite', function () {
     // eslint-disable-next-line no-unused-expressions
     expect(() => {
       mochaJsonDeserialize({ suite: {} });
@@ -75,34 +75,34 @@ describe('MochaJsonDeserialize', function() {
     }).to.not.throw;
   });
 
-  describe('~createTest', function() {
+  describe('~createTest', function () {
     let createTest;
-    before(function() {
+    before(function () {
       // eslint-disable-next-line no-underscore-dangle
       createTest = mochaJsonDeserialize.__get__('createTest');
     });
 
-    it('should throw when failed test is missing an `err` property', function() {
+    it('should throw when failed test is missing an `err` property', function () {
       expect(() => {
         createTest({ title: '', state: STATE_FAILED });
       }).to.throw('A failed test must have an "err" property');
     });
 
-    it('should default pending to false when state is set', function() {
+    it('should default pending to false when state is set', function () {
       expect(
         createTest({ title: 'test', state: STATE_PASSED })
       ).to.have.property('pending', false);
     });
   });
 
-  describe('~parseSuite', function() {
+  describe('~parseSuite', function () {
     let parseSuite;
-    before(function() {
+    before(function () {
       // eslint-disable-next-line no-underscore-dangle
       parseSuite = mochaJsonDeserialize.__get__('parseSuite');
     });
 
-    it('should override `suite.root` with `isRoot` when `root` is not defined or null', function() {
+    it('should override `suite.root` with `isRoot` when `root` is not defined or null', function () {
       expect(parseSuite({ title: '' }, true)).to.have.property('root', true);
 
       expect(parseSuite({ title: '', root: null }, true)).to.have.property(
@@ -111,7 +111,7 @@ describe('MochaJsonDeserialize', function() {
       );
     });
 
-    it('should not override `suite.root` with `isRoot` when `root` is true', function() {
+    it('should not override `suite.root` with `isRoot` when `root` is true', function () {
       expect(
         parseSuite({ title: '', root: true }, true),
         'isRoot=true'
@@ -125,7 +125,7 @@ describe('MochaJsonDeserialize', function() {
   });
 });
 
-describe('back and forth 🐍', function() {
+describe('back and forth 🐍', function () {
   let origJson;
   let json;
 
@@ -147,9 +147,9 @@ describe('back and forth 🐍', function() {
   [
     { name: 'with stats', stats: true },
     { name: 'without stats', stats: false },
-  ].forEach(function(scenario) {
-    describe(`${scenario.name}`, function() {
-      before(async function() {
+  ].forEach(function (scenario) {
+    describe(`${scenario.name}`, function () {
+      before(async function () {
         origJson = fs.readFileSync(
           path.resolve(__dirname, './fixtures/mocha-test-fixture.json'),
           'utf-8'
@@ -169,7 +169,7 @@ describe('back and forth 🐍', function() {
         });
       });
 
-      it('should match', function() {
+      it('should match', function () {
         expect(JSON.parse(json, statsReplacer)).to.eql(
           JSON.parse(origJson, statsReplacer)
         );
