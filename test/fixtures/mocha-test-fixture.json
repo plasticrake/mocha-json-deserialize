@@ -6,7 +6,6 @@
     "timeout": 2000,
     "slow": 75,
     "retries": -1,
-    "enableTimeouts": true,
     "tests": [
       {
         "title": "test in the root suite",
@@ -21,8 +20,7 @@
         "timeout": 2000,
         "slow": 75,
         "retries": -1,
-        "currentRetry": 0,
-        "enableTimeouts": true
+        "currentRetry": 0
       }
     ],
     "suites": [
@@ -34,7 +32,6 @@
         "timeout": 2000,
         "slow": 75,
         "retries": -1,
-        "enableTimeouts": true,
         "tests": [
           {
             "title": "test that passes",
@@ -49,8 +46,7 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "currentRetry": 0,
-            "enableTimeouts": true
+            "currentRetry": 0
           },
           {
             "title": "test that fails (assert)",
@@ -65,7 +61,6 @@
             "slow": 75,
             "retries": -1,
             "currentRetry": 0,
-            "enableTimeouts": true,
             "err": {
               "stack": "AssertionError [ERR_ASSERTION]: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:10:12)\n    at processImmediate (internal/timers.js:439:21)",
               "message": "FAIL",
@@ -89,7 +84,6 @@
             "slow": 75,
             "retries": -1,
             "currentRetry": 0,
-            "enableTimeouts": true,
             "err": {
               "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:14:11)\n    at processImmediate (internal/timers.js:439:21)",
               "message": "FAIL",
@@ -109,7 +103,6 @@
             "slow": 75,
             "retries": -1,
             "currentRetry": 0,
-            "enableTimeouts": true,
             "err": {
               "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:18:15)\n    at processImmediate (internal/timers.js:439:21)",
               "message": "FAIL",
@@ -130,8 +123,7 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "currentRetry": 0,
-            "enableTimeouts": true
+            "currentRetry": 0
           },
           {
             "title": "another test that is skipped",
@@ -143,8 +135,7 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "currentRetry": 0,
-            "enableTimeouts": true
+            "currentRetry": 0
           },
           {
             "title": "test that is slow",
@@ -159,8 +150,7 @@
             "timeout": 2000,
             "slow": 0,
             "retries": -1,
-            "currentRetry": 0,
-            "enableTimeouts": true
+            "currentRetry": 0
           },
           {
             "title": "",
@@ -175,8 +165,7 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "currentRetry": 0,
-            "enableTimeouts": true
+            "currentRetry": 0
           }
         ],
         "suites": [
@@ -188,7 +177,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "suites": [
               {
                 "title": "nested empty suite",
@@ -197,8 +185,7 @@
                 "file": "/fixtures/mocha-test.fixture.js",
                 "timeout": 2000,
                 "slow": 75,
-                "retries": -1,
-                "enableTimeouts": true
+                "retries": -1
               }
             ]
           },
@@ -210,7 +197,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "tests": [
               {
                 "title": "nested suite test that passes",
@@ -225,8 +211,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "nested suite test that fails",
@@ -241,7 +226,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:44:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "FAIL",
@@ -259,8 +244,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "nested suite another test that is skipped",
@@ -272,8 +256,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           }
@@ -287,7 +270,6 @@
         "timeout": 2000,
         "slow": 75,
         "retries": -1,
-        "enableTimeouts": true,
         "tests": [
           {
             "title": "test one",
@@ -302,8 +284,7 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "currentRetry": 0,
-            "enableTimeouts": true
+            "currentRetry": 0
           },
           {
             "title": "test two",
@@ -318,8 +299,7 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "currentRetry": 0,
-            "enableTimeouts": true
+            "currentRetry": 0
           },
           {
             "title": "test three",
@@ -334,8 +314,7 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "currentRetry": 0,
-            "enableTimeouts": true
+            "currentRetry": 0
           }
         ]
       },
@@ -347,7 +326,6 @@
         "timeout": 2000,
         "slow": 75,
         "retries": -1,
-        "enableTimeouts": true,
         "suites": [
           {
             "title": "suite with beforeEach hook",
@@ -357,7 +335,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "_beforeEach": [
               {
                 "title": "\"before each\" hook",
@@ -370,8 +347,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ],
             "tests": [
@@ -388,8 +364,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "failing test",
@@ -404,7 +379,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:70:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "FAIL",
@@ -422,8 +397,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           },
@@ -435,7 +409,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "_beforeAll": [
               {
                 "title": "\"before all\" hook",
@@ -448,8 +421,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ],
             "tests": [
@@ -466,8 +438,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "failing test",
@@ -482,7 +453,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:84:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "FAIL",
@@ -500,8 +471,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           },
@@ -513,7 +483,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "_afterEach": [
               {
                 "title": "\"after each\" hook",
@@ -526,8 +495,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ],
             "tests": [
@@ -544,8 +512,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "failing test",
@@ -560,7 +527,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:98:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "FAIL",
@@ -578,8 +545,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           },
@@ -591,7 +557,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "_afterAll": [
               {
                 "title": "\"after all\" hook",
@@ -604,8 +569,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ],
             "tests": [
@@ -622,8 +586,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "failing test",
@@ -638,7 +601,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:112:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "FAIL",
@@ -656,8 +619,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           },
@@ -669,7 +631,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "_beforeEach": [
               {
                 "title": "\"before each\" hook: failAfterOne for \"failing test\"",
@@ -685,7 +646,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: Before Each Hook Error\n    at Context.failAfterOne (test/fixtures/mocha-test.fixture.js:123:28)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "Before Each Hook Error",
@@ -707,8 +668,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "failing test",
@@ -720,8 +680,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "skipped test",
@@ -733,8 +692,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           },
@@ -746,7 +704,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "_beforeAll": [
               {
                 "title": "\"before all\" hook for \"passing test\"",
@@ -762,7 +719,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: Before Hook Error\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:140:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "Before Hook Error",
@@ -781,8 +738,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "failing test",
@@ -794,8 +750,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "skipped test",
@@ -807,8 +762,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           },
@@ -820,7 +774,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "_afterEach": [
               {
                 "title": "\"after each\" hook: failAfterOne for \"failing test\"",
@@ -836,7 +789,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: After Each Hook Error\n    at Context.failAfterOne (test/fixtures/mocha-test.fixture.js:158:28)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "After Each Hook Error",
@@ -858,8 +811,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "failing test",
@@ -874,7 +826,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:165:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "FAIL",
@@ -891,8 +843,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           },
@@ -904,7 +855,6 @@
             "timeout": 2000,
             "slow": 75,
             "retries": -1,
-            "enableTimeouts": true,
             "_afterAll": [
               {
                 "title": "\"after all\" hook: fail for \"skipped test\"",
@@ -920,7 +870,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: After Hook Error\n    at Context.fail (test/fixtures/mocha-test.fixture.js:175:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "After Hook Error",
@@ -942,8 +892,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               },
               {
                 "title": "failing test",
@@ -958,7 +907,7 @@
                 "slow": 75,
                 "retries": -1,
                 "currentRetry": 0,
-                "enableTimeouts": true,
+  
                 "err": {
                   "stack": "Error: FAIL\n    at Context.<anonymous> (test/fixtures/mocha-test.fixture.js:181:13)\n    at processImmediate (internal/timers.js:439:21)",
                   "message": "FAIL",
@@ -976,8 +925,7 @@
                 "timeout": 2000,
                 "slow": 75,
                 "retries": -1,
-                "currentRetry": 0,
-                "enableTimeouts": true
+                "currentRetry": 0
               }
             ]
           }
@@ -990,8 +938,7 @@
         "file": "/fixtures/mocha-test.fixture.js",
         "timeout": 2000,
         "slow": 75,
-        "retries": -1,
-        "enableTimeouts": true
+        "retries": -1
       }
     ]
   },
