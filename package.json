@@ -44,6 +44,6 @@
     "standard-version": "^9.3.0"
   },
   "peerDependencies": {
-    "mocha": "^8.4.0"
+    "mocha": ">=6"
   }
 }
