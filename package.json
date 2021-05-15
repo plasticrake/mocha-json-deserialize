@@ -16,19 +16,16 @@
   },
   "license": "MIT",
   "author": "Patrick Seal",
+  "main": "lib/mocha-json-deserialize.js",
   "files": [
     "lib"
   ],
-  "main": "lib/mocha-json-deserialize.js",
   "scripts": {
+    "coverage-report-lcov": "nyc report --reporter=lcov",
     "lint": "eslint .",
     "release": "standard-version --sign",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "pretest": "npm run lint",
     "test": "nyc mocha"
-  },
-  "peerDependencies": {
-    "mocha": ">=6"
   },
   "devDependencies": {
     "chai": "^4.3.4",
@@ -45,5 +42,8 @@
     "rewire": "^5.0.0",
     "sinon": "^10.0.0",
     "standard-version": "^9.3.0"
+  },
+  "peerDependencies": {
+    "mocha": ">=6"
   }
 }
