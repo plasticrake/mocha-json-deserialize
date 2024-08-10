@@ -34,16 +34,6 @@ jobs:
         os: [ubuntu-latest]
         node-version: ['18', '20', '22']
         mocha-version: ['6', '7', '8']
-        include:
-          - os: ubuntu-latest
-            node-version: '12'
-            mocha-version: '6'
-          - os: ubuntu-latest
-            node-version: '12'
-            mocha-version: '7'
-          - os: ubuntu-latest
-            node-version: '12'
-            mocha-version: '8'
 
     name: 'Test, node: ${{ matrix.node-version }} mocha: ${{ matrix.mocha-version }}'
 

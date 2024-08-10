@@ -20,7 +20,7 @@ module.exports = {
     },
   ],
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2022,
   },
   reportUnusedDisableDirectives: true,
   rules: {},
