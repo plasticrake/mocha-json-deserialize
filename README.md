@@ -1,10 +1,9 @@
 # mocha-json-deserialize
 
 [![NPM Version](https://img.shields.io/npm/v/mocha-json-deserialize.svg)](https://www.npmjs.com/package/mocha-json-deserialize)
-[![Build Status](https://travis-ci.com/plasticrake/mocha-json-deserialize.svg?branch=master)](https://travis-ci.com/plasticrake/mocha-json-deserialize)
-[![codecov](https://codecov.io/gh/plasticrake/mocha-json-deserialize/branch/master/graph/badge.svg)](https://codecov.io/gh/plasticrake/mocha-json-deserialize)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/plasticrake/mocha-json-deserialize.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/plasticrake/mocha-json-deserialize/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/plasticrake/mocha-json-deserialize.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/plasticrake/mocha-json-deserialize/context:javascript)
+[![Build Status](https://github.com/plasticrake/mocha-json-deserialize/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/plasticrake/mocha-json-deserialize/actions/workflows/ci.yml?query=branch%3Amaster)
+[![Coverage Status](https://coveralls.io/repos/github/plasticrake/mocha-json-deserialize/badge.svg?branch=master)](https://coveralls.io/github/plasticrake/mocha-json-deserialize?branch=master)
+[![CodeQL](https://github.com/plasticrake/mocha-json-deserialize/actions/workflows/codeql.yml/badge.svg)](https://github.com/plasticrake/mocha-json-deserialize/actions/workflows/codeql.yml)
 
 ☕️ **A Mocha.js JSON deserializer** ☕️
 
