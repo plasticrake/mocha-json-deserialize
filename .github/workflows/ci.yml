@@ -12,20 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Use Node.js 14
-        uses: actions/setup-node@v2
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
-
-      - name: Setup cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: '20'
+          cache: 'npm'
 
       - name: npm install
         run: |
@@ -35,38 +28,36 @@ jobs:
         run: |
           npm run lint
 
-  build:
+  test:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: ['12', '14', '16']
+        node-version: ['18', '20', '22']
         mocha-version: ['6', '7', '8']
         include:
           - os: ubuntu-latest
-            node-version: '14'
+            node-version: '12'
+            mocha-version: '6'
+          - os: ubuntu-latest
+            node-version: '12'
+            mocha-version: '7'
+          - os: ubuntu-latest
+            node-version: '12'
             mocha-version: '8'
-            coverage: true
 
-    name: 'Test, node: ${{ matrix.node-version }} mocha: ${{ matrix.mocha-version }} coverage: ${{ matrix.coverage }}}'
+    name: 'Test, node: ${{ matrix.node-version }} mocha: ${{ matrix.mocha-version }}'
 
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Setup cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-mocha${{ matrix.mocha-version }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-mocha${{ matrix.mocha-version }}-
+          cache: 'npm'
 
       - name: npm install
         run: |
@@ -78,17 +69,21 @@ jobs:
           npm run test
 
       - name: Generate Coverage Report
-        if: ${{ matrix.coverage }}
         run: npm run coverage-report-lcov
 
       - name: Upload Coverage to Coveralls
-        if: ${{ matrix.coverage }}
         uses: coverallsapp/github-action@master
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
+          flag-name: ${{ runner.os }}-node-${{ matrix.node-version }}-mocha-${{ matrix.mocha-version }}
+          parallel: true
 
-      - name: Upload Coverage to Codecov
-        if: ${{ matrix.coverage }}
-        uses: codecov/codecov-action@v1
+  finish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@master
         with:
-          fail_ci_if_error: true
+          github-token: ${{ secrets.github_token }}
+          parallel-finished: true
