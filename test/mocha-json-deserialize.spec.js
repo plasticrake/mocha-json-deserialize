@@ -11,7 +11,7 @@ const mochaJsonDeserialize = rewire('../lib/mocha-json-deserialize');
 
 const { STATE_FAILED, STATE_PASSED } = Mocha.Runnable.constants;
 
-const mochaVersion = new Mocha().version;
+const mochaVersion = new Mocha().version ?? '0.0';
 
 async function runJsonSerializeReporter(rootSuite, reporterOptions) {
   const mocha = new Mocha();
@@ -154,7 +154,9 @@ describe('back and forth 🐍', function () {
       before(async function () {
         let fixturePath = './fixtures/mocha-test-fixture.json';
 
-        if (mochaVersion && mochaVersion.startsWith('8.')) {
+        const mochaMajorVersion = Number(mochaVersion.split('.')[0]);
+
+        if (mochaMajorVersion >= 8) {
           fixturePath = './fixtures/mocha-test-fixture-v8.json';
         }
 
